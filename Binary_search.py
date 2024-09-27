@@ -4,7 +4,7 @@
 
 def binary_search_iter(arr,ele,i,j):
     while i <= j:
-        mid = i+(j-i)//2  #mid = (i + j)/2
+        mid = i + (j - i) // 2  # Optimized way to calculate mid to prevent overflow that can occur with (i + j) / 2
         if arr[mid] == ele:
             return mid
         elif arr[mid] < ele:
