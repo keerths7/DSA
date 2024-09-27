@@ -13,7 +13,7 @@ def evenodd2(n):
 
 #Solution 3 - faster: &, which is faster than the modulus operation because it's a direct bit-level check, you check the last digit and that's enough
 def evenodd3(n):
-    if n & 1 == 1:
+    if n & 1 == 1:  #or use n & 0 == 0:
         return "odd"
     return "even"
 
