@@ -1,6 +1,8 @@
-#Linear search
-#Time Complexity: O(n), O(n), O(1)
-#Space Complexity: O(1)- no extra space used
+'''
+Problem : Linear search
+'''
+# Time Complexity: O(n), O(n), O(1)
+# Space Complexity: O(1)- since no extra space used
 
 def linear_search(num_arr,ele):
     for i in range(len(num_arr)):
