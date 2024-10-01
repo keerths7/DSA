@@ -9,6 +9,7 @@ def num_reversal_strii(num):
     num_to_stri =str(num) # to convert the number into str we need time ans space as O(k) where k is number of digits in the number n, we can calculate k by this- say our n is 8767, so to reach that 10 power how much should you go 10 power k right, taking log on both sides, log n =  log 10**k, we get k as log 10 n  
     return num_to_stri[::-1]  # using step in slicing, it steps from reverse, similarly for this also the time and space complexity is O(logn)
 
+
 # Solution 2- shifting the numbers by reminder and division method,
 # Time Complexity: O(1)
 # Space Complexity: O(1)- no extra space used
@@ -20,9 +21,10 @@ def num_reversal_remdiv(num):
         num = num // 10
     return int(reversed_num)
 
+
 # Solution 3- My solution
 # Time Complexity: O(log**2 n) due to the string concat logic I proudly thought of 
-# Space Complexity: O(logn) because the string representation of the number requires space proportional to the number of digits (log10 n), though reversed
+# Space Complexity: O(logn) because the string representation of the number requires space proportional to the number of digits (log10 n)
 
 def num_reversal_remdiv(num):
     reversed_num = ""

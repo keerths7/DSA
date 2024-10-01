@@ -13,7 +13,7 @@ def modif_binary_search_iter(arr, ele, i, j):
         if arr[mid] != ele:
             i = mid + 1  # since we can understand from the hint that the infinite numbers start after the numbers
         elif arr[mid] == ele:
-            j = mid - 1 # since we need to find the first infinite element
+            j = mid - 1  # since we need to find the first infinite element
     return -1
 
 # Solution 2- Recursive Approach
