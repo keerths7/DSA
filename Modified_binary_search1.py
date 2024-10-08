@@ -13,6 +13,8 @@ def modif_binary_search_iter(arr, ele, i, j):
         if arr[mid] != ele:
             i = mid + 1  # since we can understand from the hint that the infinite numbers start after the numbers
         elif arr[mid] == ele:
+            if arr[mid - 1] != ele:
+                return mid
             j = mid - 1  # since we need to find the first infinite element
     return -1
 
@@ -24,14 +26,15 @@ def modif_binary_search_recur(arr, ele, i, j):
     if i > j:
         return -1
     mid = i+(j-i)//2
-    if i == j:
-        return mid
     if arr[mid] != ele:
         return modif_binary_search_recur(arr, ele, mid+1, j)  # since we can understand from the hint that the infinite numbers start after the numbers
     elif arr[mid] == ele:
+        if arr[mid - 1] != ele:
+            return mid
         return modif_binary_search_recur(arr, ele, i, mid-1) # since we need to find the first infinite element
 
-arr = [-34, 7, 31, 4, 49, -34, 0, 345, -34, 88, 3, 13, -45, 33, float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf')]
+
+arr = [-34, 7, 31, 4, 49, -34, 0, 345, 56, 77, 233, 63, 77, 89, 123, 88, 3, 13, float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf')]
 i = 0
 j = len(arr)- 1
 ele = float('inf')
