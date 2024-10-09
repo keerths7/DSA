@@ -7,7 +7,7 @@ Problem : Pair sum sequence
 
 def pair_sum_sequence(arr):
     total = 0
-    for i in range(len(arr)-1):
+    for i in range(len(arr) - 1):
         total += arr[i] + arr[i+1]
     return total
 
@@ -17,8 +17,8 @@ def pair_sum_sequence(arr):
 
 def pair_sum_sequence_usingfun(arr):
     total = 0
-    for i in range(len(arr)):
-        total += sum(i, i+1)
+    for i in range(len(arr) - 1):
+        total += sum(arr[i], arr[i+1])
     return total
 
 def sum(a,b):

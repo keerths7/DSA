@@ -7,7 +7,7 @@ Problem : Finding maximum number in a array
 
 def find_max_num_sort(num_arr):
     num_arr.sort()
-    return num_arr[-1]
+    return num_arr[-1] 
 
 # Solution 2- Using built in functions
 # Time Complexity- O(n)
