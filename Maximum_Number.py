@@ -6,7 +6,7 @@ Problem : Finding maximum number in a array
 # Space Complexity- O(n)
 
 def find_max_num_sort(num_arr):
-    num_arr.sort()
+    num_arr.sort()  # Python typically uses Timsort, which has an average and worst-case time complexity of O(nlogn), where n is the number of elements in the array.
     return num_arr[-1] 
 
 # Solution 2- Using built in functions
