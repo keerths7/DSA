@@ -45,7 +45,7 @@ def find_min_max_initial_comparision_builtinminmax(arr):
         minn = maxx = arr[0]
         i = 1
            
-    for i in range(i, len(arr)-2):
+    for i in range(i, len(arr)):
         if arr[i] > arr[i+1]:
             maxx = max(maxx, arr[i])
             minn = min(minn, arr[i+1])
