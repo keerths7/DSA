@@ -28,7 +28,7 @@ def find_max_min_brute(arr):
     return min_val, max_val
 
 # Solution 3- Using adjacent pairs comparision
-# Time Complexity- O(n)
+# Time Complexity- O(n/2) = O(n)
 # Space Complexity- O(1)
 
 def find_min_max_initial_comparision_builtinminmax(arr):
@@ -40,12 +40,12 @@ def find_min_max_initial_comparision_builtinminmax(arr):
             maxx = arr[1]
             minn = arr[0]
         i = 2
-    
+
     else:
         minn = maxx = arr[0]
         i = 1
            
-    for i in range(i, len(arr)):
+    while i < len(arr):
         if arr[i] > arr[i+1]:
             maxx = max(maxx, arr[i])
             minn = min(minn, arr[i+1])
@@ -53,11 +53,42 @@ def find_min_max_initial_comparision_builtinminmax(arr):
             maxx = max(maxx, arr[i+1])
             minn = min(minn, arr[i])
         i += 2
-    return minn, maxx
+    return (minn, maxx)
+
+# Solution 3- Using Tournament method
+# Time Complexity- O(n)
+# Space Complexity- O(1)
+
+def max_min_tournament(low, high, arr):
+    arr_min = arr[low]
+    arr_max = arr[low]
+
+    if low == high:
+        return arr_min, arr_min
+    
+    elif high == low + 1:
+        if arr[low] > arr[high]:
+            arr_max = arr[low]
+            arr_min = arr[high]
+        else:
+            arr_max = arr[high]
+            arr_min = arr[low]
+        return arr_min, arr_max
+
+    else:
+        mid = low + (high - low) // 2
+        arr_min1, arr_max1 = max_min_tournament(low, mid, arr)
+        arr_min2, arr_max2 = max_min_tournament(mid+1, high, arr)
+
+    return (min(arr_min1, arr_min2), max(arr_max1, arr_max2))
 
 arr = [13,67,46,562,3,23,76,32,657]
+low = 0
+high = len(arr) - 1
+
 # print(find_max_min(arr))
 # min_val, max_val = find_max_min(arr)  # when I don't want to print it as a tuple
-# print(min, max)
+# print(min_val, max_val)
 # print(find_max_min_brute(arr))
-print(find_min_max_initial_comparision_builtinminmax(arr))
+# print(find_min_max_initial_comparision_builtinminmax(arr))
+print(max_min_tournament(low, high, arr))
