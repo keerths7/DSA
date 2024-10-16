@@ -59,28 +59,7 @@ def find_min_max_initial_comparision_builtinminmax(arr):
 # Time Complexity- O(n)
 # Space Complexity- O(1)
 
-def max_min_tournament(low, high, arr):
-    arr_min = arr[low]
-    arr_max = arr[low]
 
-    if low == high:
-        return arr_min, arr_min
-    
-    elif high == low + 1:
-        if arr[low] > arr[high]:
-            arr_max = arr[low]
-            arr_min = arr[high]
-        else:
-            arr_max = arr[high]
-            arr_min = arr[low]
-        return arr_min, arr_max
-
-    else:
-        mid = low + (high - low) // 2
-        arr_min1, arr_max1 = max_min_tournament(low, mid, arr)
-        arr_min2, arr_max2 = max_min_tournament(mid+1, high, arr)
-
-    return (min(arr_min1, arr_min2), max(arr_max1, arr_max2))
 
 arr = [13,67,46,562,3,23,76,32,657]
 low = 0

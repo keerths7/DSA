@@ -1,3 +1,7 @@
+'''
+https://www.geeksforgeeks.org/problems/third-largest-element/1
+'''
+
 # Solution 1- Using slice method
 # Time Complexity- O(nlogn)
 # Space Complexity- O(n)
