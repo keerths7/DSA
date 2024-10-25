@@ -24,8 +24,8 @@ print(count_divisible_digits(n))
 
 def count_divisible_digits2(n):
     count = 0
-    num_arr = list(str(n))
-    for i in num_arr:
+    n_str = str(n)
+    for i in n_str:
         if int(i) != 0 and n % int(i) == 0:
             count += 1
     return count

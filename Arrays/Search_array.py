@@ -11,7 +11,7 @@ def array_search(arr, ele):
     return -1
 
 # Solution 2- using linear search
-# Time Complexity: O(n), O(n), O(1)
+# Time Complexity: O(n)
 # Space Complexity: O(1)- since no extra space used
 
 def array_search_linear(arr, ele):
