@@ -15,10 +15,13 @@ def power_num_direct(n, pow):
 
 def power_num(n, pow):
     last_digit_cycle = []
-    current_digit = n % 10
+    last_digit = n % 10
+    if pow == 0:
+        return 1
+    current_digit = last_digit
     while current_digit not in last_digit_cycle:
         last_digit_cycle.append(current_digit)
-        current_digit = (current_digit * n) % 10
+        current_digit = (current_digit * last_digit) % 10
     pow = pow % len(last_digit_cycle)
     return last_digit_cycle[pow - 1]
 
@@ -71,10 +74,11 @@ def power_iterative(n,pow):
     return result
 
 
-n = 2
-pow = 10
+n = 4
+pow = 6
 result = power_recursive(n, pow)
 result1 = power_iterative(n, pow)
 print(f"{n} to the power of {pow} is {result}")
 print(f"{n} to the power of {pow} is {result1}")
+
 
