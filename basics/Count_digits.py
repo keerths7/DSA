@@ -21,7 +21,14 @@ def count_digits_div(n):
         count += 1
     return count
 
+def count_digits_div_recur(n):
+    count = 0
+    if n < 0:
+        return 0
+    count += 1
+    return count + count_digits_div_recur(n//10)
+
 n = int(input("Enter the number:"))
 print(count_digits_stri(n))
 print(count_digits_div(n))
-
+print(count_digits_div_recur(n))

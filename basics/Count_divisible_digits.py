@@ -18,11 +18,12 @@ def count_divisible_digits(n):
 n = int(input("Enter any number:"))
 print(count_divisible_digits(n))
 
-# Solution 2-
+
+# Solution 2- Using string method
 # Time Complexity: O(logn)- The number of digits k is proportional to log10(n), so we can say the time complexity is O(log n).
 # Space Complexity: O(logn)
 
-def count_divisible_digits2(n):
+def count_divisible_digits_str(n):
     count = 0
     n_str = str(n)
     for i in n_str:
@@ -30,4 +31,4 @@ def count_divisible_digits2(n):
             count += 1
     return count
 
-print(count_divisible_digits2(n))
+print(count_divisible_digits_str(n))

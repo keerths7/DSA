@@ -1,5 +1,5 @@
 '''
-https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1
+Problem: https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1
 '''
 
 # Solution 1- Using all that we learnt with count and digit seperation

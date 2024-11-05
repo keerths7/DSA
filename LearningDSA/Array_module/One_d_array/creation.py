@@ -7,8 +7,8 @@
 
 import array
 
-# Time Complexity to create an array: O(1)  
-# Space Complexity to create an array: O(1)
+# Time Complexity to create an empty array: O(1)  
+# Space Complexity to create an empty array: O(1)
 
 arr = array.array('i', [])  # it doesn't store reference to any memory block since it is an empty array, it only stores meta data information
 print(arr)
@@ -27,8 +27,8 @@ Numpy module is not a part of standard python library hence additional installat
 
 import numpy as np
 
-# Time Complexity to create an array: O(1)  
-# Space Complexity to create an array: O(1)
+# Time Complexity to create an wmpty array: O(1)  
+# Space Complexity to create an empty array: O(1)
 
 np_array = np.array([], dtype = int)
 print(np_array)
