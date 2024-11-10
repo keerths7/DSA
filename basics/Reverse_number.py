@@ -34,6 +34,10 @@ def num_reversal_remdiv_str(num):
     return int(reversed_num) # similarly to convert str to int, the time complexity is O(logn) but space complexity for this is is O(1) only
 
 
+# Solution 4- shifting the numbers by reminder and division method recuriviely
+# Time Complexity: O(logn)
+# Space Complexity: O(logn)- no extra space used
+
 def num_reversal_recur(num, reversed = 0):
     if num <= 0:
         return reversed

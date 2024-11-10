@@ -27,7 +27,6 @@ def count_digits_div(n):
 # Space complexity: O(logn) 
 
 def count_digits_div_recur(n):
-    count = 0
     if n <= 0:
         return 0
     return 1 + count_digits_div_recur(n//10)

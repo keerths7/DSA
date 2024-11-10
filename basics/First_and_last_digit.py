@@ -11,10 +11,6 @@ def first_and_last(n):
     while n > 10:
         n = n // 10
     return n, last
-    
-    
-n = int(input("Enter a number:"))
-print(first_and_last(n))
 
 
 # Solution 2- Using str method
@@ -27,4 +23,7 @@ def first_and_last_str(n):
     last = int(str_n[-1])
     return first, last
 
+
+n = int(input("Enter a number:"))
+print(first_and_last(n))
 print(first_and_last_str(n))
