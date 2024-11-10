@@ -34,7 +34,15 @@ def num_reversal_remdiv_str(num):
     return int(reversed_num) # similarly to convert str to int, the time complexity is O(logn) but space complexity for this is is O(1) only
 
 
+def num_reversal_recur(num, reversed = 0):
+    if num <= 0:
+        return reversed
+    reversed = reversed * 10 + (num % 10)
+    return num_reversal_recur(num//10, reversed)
+
+
 num = int(input("Enter number of your choice:"))
 print(num_reversal_remdiv(num))
 print(num_reversal_stri(num))
 print(num_reversal_remdiv_str(num))
+print(num_reversal_recur(num))

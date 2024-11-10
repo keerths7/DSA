@@ -17,10 +17,10 @@ ele = 4
 print(remove_ele(arr1, ele))
 
 
-
 def insert_ele(arr1, index, ele):
     for i in range(len(arr1) - 1, index, -1):
         arr1[i] = arr1[i-1]
+    print(arr1)
     arr1[index] = ele
     return arr1
 
