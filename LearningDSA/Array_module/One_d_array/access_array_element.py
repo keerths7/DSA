@@ -4,7 +4,7 @@ import array
 
 # Time Complexity: O(1)     
 # This is because array elements are stored in contiguous memory locations,
-# so the program can compute the exact location of an element with a simple calculation.
+# so the program can compute the exact location of an element 
 # Space Complexity: O(1)
 
 def access_array_element(arr, index):

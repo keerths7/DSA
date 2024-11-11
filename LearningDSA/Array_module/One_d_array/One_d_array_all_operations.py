@@ -45,6 +45,7 @@ arr1.fromlist(list1)
 print(arr1)
 
 # 7. Remove array element using remove()
+# remov() searches for the element, if it is found it removes it
 
 print("Step 7")
 arr1.remove(13)
@@ -57,44 +58,36 @@ print("Step 8")
 arr1.pop()
 print(arr1)
 
-# 9. 
+# 9. Find index of any element using the index() method 
 
 print("Step 9")
+print(arr1.index(12))
 
-print(arr1)
-
-# 10. 
+# 10. Reverse a python array using reverse() method
+# This method directly changes the original array
 
 print("Step 10")
-
+arr1.reverse()
 print(arr1)
 
-# 11. 
+# 11. Get array buffer information using buffer_info() method
 
 print("Step 11")
+print(arr1.buffer_info())
 
-print(arr1)
-
-# 12. 
+# 12. Count() method gives the number of occurences of a particular element
 
 print("Step 12")
+print(arr1.count(8))
 
-print(arr1)
-
-# 13. 
-
-print("Step 13")
-
-print(arr1)
-
-# 14. 
+# 13. tolist() method converts array to list
 
 print("Step 14")
+#print(arr1.tolist())
 
-print(arr1)
-
-# 15. 
+# 14. slicing array elements
 
 print("Step 15")
-
-print(arr1)
+print(arr1[:4])
+print(arr1[8:])
+print(arr1[5:9])
