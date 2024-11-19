@@ -28,6 +28,6 @@ def find_max_num_loop(num_arr):
     return let_max
 
 num_arr = [3, 4, 77, 89, 23, 89, 123, 43, 55, 233, 54, 92, 45]
-#print(find_max_num_sort(num_arr))
+print(find_max_num_sort(num_arr))
 print(find_max_num_maxfn(num_arr))
 print(find_max_num_loop(num_arr))

@@ -2,7 +2,7 @@
 
 import array
 
-# Time Complexity:
+# Time Complexity: O(n)
 #`remove(1)` searches for the element `1` in the array, which takes O(n) time in the worst case.
 # After finding the element, all elements to the right are shifted one position to the left,
 # which also takes O(n) time in the worst case if the element is at the start of the array.
