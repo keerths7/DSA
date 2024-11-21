@@ -73,7 +73,8 @@ print(arr1)
 # 11. Get array buffer information using buffer_info() method
 
 print("Step 11")
-print(arr1.buffer_info())
+print(arr1.buffer_info())   # buffer_info returns a tuple: (Memory address of the buffer, Number of elements in the array)
+
 
 # 12. Count() method gives the number of occurences of a particular element
 
@@ -83,7 +84,7 @@ print(arr1.count(8))
 # 13. tolist() method converts array to list
 
 print("Step 14")
-#print(arr1.tolist())
+print(arr1.tolist())    
 
 # 14. slicing array elements
 

@@ -50,11 +50,14 @@ def count_divisible_digits_arr(n):
 # Time Complexity: O(logn)- The number of digits k is proportional to log10(n), so we can say the time complexity is O(log n).
 # Space Complexity: O(logn)
 
-def count_divisible_digits_recur(n):
+def count_divisible_digits_recur(n, original = None):
+    if original is None:
+        original = n
     if n <= 0:
         return 0
-    if n % 10 != 0 and n % (n % 10) == 0:
-        return 1 + count_divisible_digits_recur(n//10)
+    if n % 10 != 0 and original % (n % 10) == 0:
+        return 1 + count_divisible_digits_recur(n//10, original)
+    return count_divisible_digits_recur(n//10, original)
 
 
 n = int(input("Enter any number:"))

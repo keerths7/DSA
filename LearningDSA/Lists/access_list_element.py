@@ -4,7 +4,7 @@ shoppingList = ["Milk", "Cheese", "Paneer"]
 
 print(shoppingList[0])
 print(shoppingList[1])
-#print(shoppingList[3])
+# print(shoppingList[3]) results in error
 print(shoppingList[-1])
 
 # checking whether an element is present in the list using in operator
