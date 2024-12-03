@@ -1,7 +1,7 @@
 # search for element in a list using in operator
 
 # the in operator gives boolean output
-# Time Complexity: O(n)  under the hood in operator uses linear search, so if the element is in the end of the list, it has to check all n elements, in operator is  more efficient when using with dictionary and sets which are implemented as hash tables is involved.
+# Time Complexity: O(n)  under the hood in operator uses linear search, so if the element is in the end of the list, it has to check all n elements, in operator is  more efficient when using with dictionary and sets which are implemented as hash tables.
 # Space Complexity: O(1)
 
 list1 = [1, 66, 8, 54, 77, 7, 975, 86, 9, 33]

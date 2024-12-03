@@ -19,7 +19,7 @@ def num_reversal_remdiv(num):
     while num > 0:
         reversed_num = reversed_num * 10  + num % 10
         num = num // 10
-    return int(reversed_num)
+    return reversed_num
 
 
 # Solution 3- My solution

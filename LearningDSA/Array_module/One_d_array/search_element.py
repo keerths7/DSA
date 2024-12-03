@@ -5,7 +5,6 @@ import array
 # Time Complexity: O(n)  we would have to search through the entire array to find the element    
 # Space Complexity: O(1)
 
-
 def search_element(arr1, target):
     for i in range(len(arr1)):
         if arr1[i] == target :

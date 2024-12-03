@@ -7,7 +7,7 @@ Problem : Factorial of a number
 
 def factorial_iter(n):
     product = 1
-    for i in range(1,n+1):
+    for i in range(2,n+1):
         product *= i
     return product
 
@@ -22,6 +22,6 @@ def factorial_recur(n):
     return n * factorial_recur(n-1)
 
 
-n = int(input("Enter the number for which you would like to find Factorial:"))
+n = int(input("Enter the number for which you would like to find Factorial: "))
 print(factorial_iter(n))
 print(factorial_recur(n))
