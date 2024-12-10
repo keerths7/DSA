@@ -27,3 +27,11 @@ print(sum(a))  # returns sum of all the elements
 
 print(sum(a)/ len(a))
 
+# problem example sum
+total = 0
+while(True):
+    inp = input("Enter the value: ")
+    if inp == "done": break
+    value = float(inp)
+    total += value
+print(total)

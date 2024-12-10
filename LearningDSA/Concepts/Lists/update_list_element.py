@@ -19,3 +19,5 @@ print(list1)
 # it works by looping through all the elements of the new list provided and adding them one by one at the end of our list
 list1.extend([99,88,77])
 print(list1)
+list1 = list1 + [111]   # # Concatenating a new element (111) to the list by creating a new list and assigning it back to list1
+print(list1)

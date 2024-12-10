@@ -4,4 +4,4 @@ myList = ['a', 'b', 'c', 'd', 'e', 'f']
 
 print(myList[:2])
 print(myList[1:])
-print(myList[:])
+print(myList[:])      # if we specify no upper bound and lower bound, al the values in the list are taken
