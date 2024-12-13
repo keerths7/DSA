@@ -40,9 +40,9 @@ def count_divisible_digits_arr(n):
     for i in n_str:   # O(logn) time and space complexity for converting n to str
         if int(i) != 0 and n % int(i) == 0:
             arr[int(i)] += 1
-    for i in range(len(arr)):
-        if arr[i] > 0:
-            sum += arr[i]
+    for i in arr:
+        if i > 0:
+            sum += i
     return sum
 
 
@@ -50,18 +50,31 @@ def count_divisible_digits_arr(n):
 # Time Complexity: O(logn)- The number of digits k is proportional to log10(n), so we can say the time complexity is O(log n).
 # Space Complexity: O(logn)
 
-def count_divisible_digits_recur(n, original = None):
+def count_divisible_digits_recur1(n, original = None):
     if original is None:
         original = n
     if n <= 0:
         return 0
     if n % 10 != 0 and original % (n % 10) == 0:
-        return 1 + count_divisible_digits_recur(n//10, original)
-    return count_divisible_digits_recur(n//10, original)
+        return 1 + count_divisible_digits_recur1(n//10, original)
+    return count_divisible_digits_recur1(n//10, original)
+
+
+# Solution 4- Using logic, recursively
+# Time Complexity: O(logn)- The number of digits k is proportional to log10(n), so we can say the time complexity is O(log n).
+# Space Complexity: O(logn)
+
+def count_divisible_digits_recur2(n_var, original):
+    if n_var <= 0:
+        return 0
+    if n_var % 10 != 0 and original % (n_var % 10) == 0:
+        return 1 + count_divisible_digits_recur2(n_var//10, original)
+    return count_divisible_digits_recur2(n_var//10, original)
 
 
 n = int(input("Enter any number:"))
 print(count_divisible_digits(n))
 print(count_divisible_digits_str(n))
 print(count_divisible_digits_arr(n))
-print(count_divisible_digits_recur(n))
+print(count_divisible_digits_recur1(n))
+print(count_divisible_digits_recur2(n,n))
