@@ -16,14 +16,14 @@ def power_num_direct(n, pow):
 def power_num(n, pow):
     if pow == 0:
         return 1
-    last_digit_cycle = []
-    last_digit = n % 10
-    current_digit = last_digit
-    while current_digit not in last_digit_cycle:
-        last_digit_cycle.append(current_digit)
-        current_digit = (current_digit * last_digit) % 10
-    pow = pow % len(last_digit_cycle)
-    return last_digit_cycle[pow - 1]
+    last_digit= n % 10
+    powered_value_end = last_digit
+    cycle = []
+    while powered_value_end not in cycle:
+        cycle.append(powered_value_end)    
+        powered_value_end = (powered_value_end * last_digit) % 10
+    ind = pow % len(cycle)
+    return cycle[ind-1]
 
 
 n = int(input("Enter a number:"))
