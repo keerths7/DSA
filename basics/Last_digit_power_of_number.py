@@ -14,10 +14,10 @@ def power_num_direct(n, pow):
 # Max cycle length is 4, hence O(4) which is constant
 
 def power_num(n, pow):
-    last_digit_cycle = []
-    last_digit = n % 10
     if pow == 0:
         return 1
+    last_digit_cycle = []
+    last_digit = n % 10
     current_digit = last_digit
     while current_digit not in last_digit_cycle:
         last_digit_cycle.append(current_digit)
