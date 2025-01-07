@@ -1,4 +1,6 @@
-
+'''
+https://www.geeksforgeeks.org/problems/prime-number2314/1
+'''
 # Solution 5- Taking only upto sqrt(n)
 
 
