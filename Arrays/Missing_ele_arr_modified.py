@@ -5,7 +5,7 @@
 # Space Complexity- O(1)
 def missing_num_modified(listy):
     num1 = listy[0]
-    for i in range(1,len(listy)):
+    for i in range(len(listy)):
         if listy[i] != num1+i:
             return f"The missing number is, {num1+i}"
 

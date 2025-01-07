@@ -47,7 +47,12 @@ print(power_num(n, pow))
 # - For example, to compute 2 ** 10, it only performs 4 or 5 multiplications.
 # - This approach is much faster for large powers like 2 ** 1000.
 
+
+# Solution 1- Using recursion
+# Time Complexity- O(log(pow))
+# Space Complexity- O(log(pow)) due to recursion stack
 def power_recursive(n, pow):
+
     # Base case: any number to the power of 0 is 1
     if pow == 0:
         return 1
@@ -62,6 +67,10 @@ def power_recursive(n, pow):
         return n * power_recursive(n, pow - 1)  # n * (n^(pow-1))
     
 
+# Solution 2- Using iteration
+# Time Complexity- O(log(pow))
+# Space Complexity- O(1)
+
 def power_iterative(n,pow):
     if pow == 0:
         return 1
@@ -74,7 +83,7 @@ def power_iterative(n,pow):
     return result
 
 
-n = 4
+n = 2
 pow = 6
 result = power_recursive(n, pow)
 result1 = power_iterative(n, pow)

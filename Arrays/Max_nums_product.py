@@ -10,7 +10,7 @@ def max_num_product(arr):
     return arr[-1] * arr[-2]
 
 
-# Solution 2- Using 
+# Solution 2- Using iteration
 # Time Complexity: O(n)- since we are searching through all the elements in the array
 # Space Complexity: O(1)- no extra space used
 def max_num_product(arr):

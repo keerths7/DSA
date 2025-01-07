@@ -1,7 +1,5 @@
 # Time Complexity: O(n)
 # Space Complexity: O(1)
-
-
 def search_dict(dict1, target):
     for i in dict1:
         if dict1[i] == target:

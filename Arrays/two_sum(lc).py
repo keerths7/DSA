@@ -1,6 +1,6 @@
 '''
 Problem: https://leetcode.com/problems/two-sum/description/
-Find all pairs of integers whose sum is equal to a given number
+Find location of all pairs of integers whose sum is equal to a given number
 '''
 # Solution 1- Using Brute Force
 # Time Complexity: O(n^2)

@@ -8,7 +8,7 @@ https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-ar
 def find_max_min(arr):
     if len(arr) == 1:
         return arr[0] 
-    arr.sort()  # Python uses Timsort which has time complexity of O(nlogn)
+    arr.sort()      # Python uses Timsort which has time complexity of O(nlogn)
     return arr[0], arr[-1]
 
 # Solution 2- Using brute force
