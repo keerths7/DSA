@@ -16,14 +16,14 @@ def prime_num_bruteforce(n):
 # Time Complexity- O(root(n))
 # Space Complexity- O(1)
 def prime_num_sqrt(n):
-    for i in range(2, int(n**0.5)):
+    for i in range(2, int(n**0.5)+1):
         if n % i == 0:
             return 0
     return 1
 
 
 # Solution 3- Taking only upto sqrt
-# Time Complexity- O(root(n))
+# Time Complexity- 
 # Space Complexity- O(1)
 
 def sixiplusk(n):
