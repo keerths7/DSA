@@ -27,5 +27,27 @@ list_of_tuples = [("one", "English"), ("two", "Spanish"), ("three", "Dutch")]
 print(dict(list_of_tuples))
 
 
+'''
+Dictionaries are indexed by keys.
+Python dictionaries are implemented using hash tables, it is an array whose indexes are obtained using a hash function on the keys.
+
+Passing the Key to the Hash Function:
+    When you insert a key-value pair into a dictionary, Python's dict first passes the key through a hash function. This hash function generates a unique (or pseudo-unique) hash value for that key.
+    Python's built-in hash() function is used to compute the hash value. For example:
+
+    hash("apple")  # Might return a hash value like 123456789
+
+Calculating the Hash Value and Index:
+    The hash value returned by the hash function is then mapped to an index in the internal array. This is done by using the modulus operator to ensure the index is within the bounds of the array size.
+
+    index = hash("apple") % table_size
+    This index is where the key-value pair will be stored in the hash table (i.e., the internal array).
+
+Storing the Key-Value Pair:
+    If the computed index is empty, the key-value pair is directly inserted at that index.
+    If the index is already occupied (due to a collision), Python's dict uses collision resolution techniques generally adds it to a linked list.  
+        
+'''
+
 # Amortised?
 # If we add pairs to the dict and the capacity of the dictionary is reached, the space allocated is doubled
