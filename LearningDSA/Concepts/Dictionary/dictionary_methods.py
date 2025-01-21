@@ -40,4 +40,5 @@ print(my_dict.items())
 my_dict = {"name": "Keerthana", "age": 23, "address": "India", "hobby": "reading"}
 print(my_dict.keys())
 
+
 # pop() method removes the item with the specified key name and returns the value
