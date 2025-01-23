@@ -65,6 +65,8 @@ print(my_dict.values())
 
 # update(other_dictionary or iterable) updates the dictionary with key-value pairs from another dictionary or an iterable (like tuples).
 # If a key is not already present in the dictionary, it will be added.
+# so using update we can take a dict and put it in another dict
+
 my_dict = {"name": "Keerthana", "age": 23, "address": "India", "hobby": "reading"}
 new_dict = {"a":1, "b":2, "c":3}
 print(my_dict)
@@ -78,5 +80,3 @@ print(my_dict)
 my_dict = {"name": "Keerthana", "age": 23, "address": "India", "hobby": "reading"}
 my_dict.update()
 print(my_dict)
-
-# so using update we can take a dict and put it in another dict
