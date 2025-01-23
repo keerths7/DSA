@@ -48,6 +48,3 @@ Storing the Key-Value Pair:
     If the index is already occupied (due to a collision), Python's dict uses collision resolution techniques generally adds it to a linked list.  
         
 '''
-
-# Amortised?
-# If we add pairs to the dict and the capacity of the dictionary is reached, the space allocated is doubled
