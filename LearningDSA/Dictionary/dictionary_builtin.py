@@ -1,5 +1,5 @@
 my_dict = {
-    3 :"three",
+    3 : "three",
     5 : "nine",
     9 : "nine",
     2 : "two",
@@ -18,4 +18,6 @@ print("ten" not in my_dict)
 
 print(len(my_dict))                # len()returns the number of key-value pairs
 
-print(all(my_dict))                # all() checks the keys of the dict, all keys should be True, meaning it should be either int or str but not 0 or ""
+print(all(my_dict))                # all() checks the keys of the dict, all keys should be True, meaning the keys should be either int or str but not 0 or ""
+
+print(any(my_dict))                # any() checks the keys of the dict, if one of the keys is True itself, 
