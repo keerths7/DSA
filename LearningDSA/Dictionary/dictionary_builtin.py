@@ -18,6 +18,5 @@ print("ten" not in my_dict)
 
 print(len(my_dict))                # len()returns the number of key-value pairs
 
-print(all(my_dict))                # all() checks the keys of the dict, all keys should be True, meaning the keys should be either int or str but not 0 or ""
-
-print(any(my_dict))                # any() checks the keys of the dict, if one of the keys is True itself, 
+print(all(my_dict))                # all() checks the keys of a dictionary and returns True if all keys are truthy. Keys are falsy if they are 0, "", None, or False. If even one key is falsy, all() will return False.
+print(any(my_dict))                # any() checks the keys of a dictionary and returns True if at least one key is truthy. Keys are falsy if they are 0, "", None, or False. If all keys are falsy, any() will return False.
