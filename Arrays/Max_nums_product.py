@@ -1,7 +1,6 @@
 '''
 Find the product of the first two largest numbers in a list
 '''
-
 # Solution 1- Using built-in functions
 # Time Complexity: O(nlogn)
 # Space Complexity: O(n)- no extra space used

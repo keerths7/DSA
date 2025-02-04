@@ -1,5 +1,6 @@
 '''
 Sum of factors of a number upto n
+https://www.geeksforgeeks.org/problems/sum-of-all-divisors-from-1-to-n4738/1?utm_source=youtube&utm_medium=courseteam_practice_desc&utm_campaign=problem_of_the_day
 '''
 
 # Solution 1- Brute force
@@ -17,7 +18,7 @@ def sum_factors_upto(n):
 # Solution 2- Optimized
 # Time Complexity: O(n*sqrt(n))
 # Space Complexity: O(1)
-def sum_factors_upto_oprimized(n):
+def sum_factors_upto_optimized(n):
     sum = 1
     for i in range(2,n+1):                      # O(n)
         for j in range(1, int(i**0.5)+1):       # O(sqrt(n))
@@ -36,7 +37,7 @@ Lets target the numbers in the range of 1 to n, add 8 as 1 is present in all num
 so the pattern is n // 1 * 1, n // 2 * 2, n //3 * 3 and so on, hence it is number of occurences times the number itself
 some numbers like 5,6,7,8, will be added only once as there is no common factors.
 '''
-def sum_factors_upto_oprimized_better(n):
+def sum_factors_upto_optimized_better(n):
     sum = 0 
     for i in range(1, n+1):
         sum += (n // i) * i 
@@ -44,5 +45,5 @@ def sum_factors_upto_oprimized_better(n):
 
 
 print(sum_factors_upto(49))
-print(sum_factors_upto_oprimized(49))
-print(sum_factors_upto_oprimized_better(49))
+print(sum_factors_upto_optimized(49))
+print(sum_factors_upto_optimized_better(49))

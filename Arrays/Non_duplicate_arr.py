@@ -5,11 +5,12 @@
 # Space complexity: O(1)
 
 def find_repeating(arr):
-    uniuqe_list = []
+    unique_list = []
     for i in range(len(arr)):
         for j in range(i+1, len(arr)):
-            if arr[i] != arr[j]:
-                uniuqe_list.append(arr[i])
+            if arr[i] != arr[j] and arr[i] not in unique_list:
+                unique_list.append(arr[i])
+    return unique_list
 
 # Solution 2- Using set
 # Time complexity: O(n)

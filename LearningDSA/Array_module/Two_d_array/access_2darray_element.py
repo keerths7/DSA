@@ -17,3 +17,6 @@ row_index = int(input("Enter row index: "))
 column_index = int(input("Enter column index: "))
 
 print(access_2darr_element(arr1, row_index, column_index))
+
+# row_index here means, when you take a matrix, the length of the matrix gives the number of rows
+# column_index here means, when you take a row in a matrix, say [1,2,3,4], you can access the the number of columns by finding length of the row 

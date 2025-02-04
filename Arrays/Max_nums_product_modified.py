@@ -1,3 +1,6 @@
+'''
+Find the product of the first two largest numbers in a list, with numbers repeating
+'''
 # Solution 1- Using iteration
 # Time Complexity: O(n)- since we are searching through all the elements in the array
 # Space Complexity: O(1)- no extra space used

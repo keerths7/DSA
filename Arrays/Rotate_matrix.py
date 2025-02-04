@@ -1,15 +1,15 @@
 # this does not work for non square matrix
 def rotate(matrix):
     for i in range(len(matrix)):
-        for j in range(i, len(matrix[0])):
+        for j in range(i+1, len(matrix[0])):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
    
     for row in matrix:  
         row.reverse()  
     return matrix
 
-matrix = [[2,3],[5,6],[8,9]]
-# print(rotate(matrix))
+matrix = [[2,3,7],[5,6,1],[8,9,4]]
+print(rotate(matrix))
 
 # rotate non square matrix
 def rotate_nonsquare(matrix):

@@ -27,7 +27,7 @@ def find_divisors_optimized(n):
             if i != n // i:
                 print(i, n // i, end = " ")
             else:
-                print(i, end = " ")
+                print(i)
 
 
 n = int(input("Enter any number:"))

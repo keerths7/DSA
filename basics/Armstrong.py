@@ -25,8 +25,9 @@ def find_armstrong(n):
 
 def find_armstrong_str(n):
     sum = 0
+    count = len(str(n))
     for i in str(n):
-        sum += int(i) ** len(str(n))
+        sum += int(i) ** count
     return sum == n
 
 
