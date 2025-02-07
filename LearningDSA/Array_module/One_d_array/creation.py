@@ -27,13 +27,13 @@ Numpy module is not a part of standard python library hence additional installat
 
 import numpy as np
 
-# Time Complexity to create an wmpty array: O(1)  
+# Time Complexity to create an empty array: O(1)  
 # Space Complexity to create an empty array: O(1)
 
 np_array = np.array([], dtype = int)
 print(np_array)
 
-# Time Complexity to create an array: O(n)  since it involves copying the array to the referenced array
+# Time Complexity to create an array: O(n)  since it involves copying the array elements to the referenced array
 # Space Complexity to create an array: O(n)  for memory allocation
 
 np_array1 = np.array([1,2,3,4,5]) 

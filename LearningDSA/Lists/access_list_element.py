@@ -1,5 +1,8 @@
 # accesing list element by index
 
+# Time complexity: O(n), accessing a list element (list[i]) has O(1) time complexity since lists are stored contiguously in memory, allowing direct access.  
+# Space complexity: O(1), because accessing an element does not require extra memory allocation.  
+
 shoppingList = ["Milk", "Cheese", "Paneer"]
 
 print(shoppingList[0])

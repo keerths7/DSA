@@ -40,8 +40,8 @@ def check_consonant(letter):
                 return True
 
 sentence = input("Enter any word: ")
-vowel_list = [i for i in sentence if check_consonant(i)]
-print(vowel_list)
+consonant_list = [i for i in sentence if check_consonant(i)]
+print(consonant_list)
 
 # Transforming values based on a condition:
 
