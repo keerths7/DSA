@@ -1,4 +1,4 @@
-# tuples are immutable
+# tuples are immutable hence updation and deletion is not possible in tuples
 # it is advisable to put tuples in a () to indentify it easily, but it is not mandatory
 
 # Time Complexity: O(n)   since it involves copying the tuple elements to the referenced tuple
