@@ -23,10 +23,40 @@ print(tuple(list1))
 
 
 # Time Complexity: O(n)     creating a single-element tuple (value,) takes O(1), tuple concatenation, (value,) + input_tuple, requires copying all n elements from input_tuple, so it takes O(n) time.
-# Space Complexity: O(n)   a new tuple of size n+1 is created, which requires O(n) additional space.
+# Space Complexity: O(n)    a new tuple of size n+1 is created, which requires O(n) additional space.
 
 def insert_at_beginning(input_tuple, value):
     return (value,) + input_tuple               # concatenates the tuples 
 
-t1 = (3,34,5,6,20)
+t1 = (3,34,5,6,2)
 print(insert_at_beginning(t1, 6))
+
+
+def tuple_elementwise_sum(): 
+    if len(tuple1) != len(tuple2):
+        raise ValueError("Check the length of the tuples to be equal.")
+    sum = 0
+    tuple3 = ()
+    for i in tuple1, tuple2:
+        sum = tuple1[i] + tuple[i]
+        tuple3.append(sum)
+    return tuple3
+
+
+def tuple_elementwise_sum(t1, t2):
+    if len(t1) != len(t2):
+        raise ValueError("Input tuples must have the same length.")
+
+    result = tuple(a + b for a, b in zip(t1, t2))
+    return result
+
+
+def tuple_elementwise_sum(tuple1, tuple2):
+    return tuple(map(sum, zip(tuple1, tuple2)))
+
+t1 = (1, 2, 3)
+t2 = (4, 5, 6)
+print(tuple_elementwise_sum(t1, t2))
+    
+
+
