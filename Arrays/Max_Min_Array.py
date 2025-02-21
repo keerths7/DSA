@@ -8,7 +8,7 @@ https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-ar
 def find_max_min(arr):
     if len(arr) == 1:
         return arr[0] 
-    arr.sort()      # Python uses Timsort which has time complexity of O(nlogn)
+    arr.sort()              # Python uses Timsort which has time complexity of O(nlogn)
     return arr[0], arr[-1]
 
 # Solution 2- Using brute force
@@ -38,7 +38,7 @@ def find_min_max_initial_comparision_builtinminmax(arr):
             minn = arr[1]
         else:
             maxx = arr[1]
-            minn = arr[0]
+            minn = arr[0] 
         i = 2
 
     else:
@@ -55,19 +55,40 @@ def find_min_max_initial_comparision_builtinminmax(arr):
         i += 2
     return (minn, maxx)
 
-# Solution 3- Using Tournament method
+# Solution 4- Using Tournament method- divide and conquer
 # Time Complexity- O(n)
 # Space Complexity- O(1)
 
+def min_max_tournament(arr, low, high):
+    if low == high:
+        arr_min = arr[low] 
+        arr_max = arr[low]
+        return (arr_min, arr_max)
+    elif high == low + 1:
+        if arr[low] < arr[high]:
+             
+            arr_min = arr[low]    
+            arr_max = arr[high]
+        else:
+            arr_min = arr[high]            
+            arr_max = arr[low]    
+        return(arr_min, arr_max)
+    else:
+        mid = (low + high) // 2
+        arr_min1, arr_max1 = min_max_tournament(arr, low, mid)         
+        arr_min2, arr_max2 = min_max_tournament(arr, mid+1, high)       
+    
+    return (min(arr_min1, arr_min2), max(arr_max1, arr_max2))
 
 
-arr = [13,67,46,562,3,23,76,32,657]
+arr = [1000, 11, 445, 45, 330, 3000, 677, 988]
 low = 0
 high = len(arr) - 1
 
 # print(find_max_min(arr))
 # min_val, max_val = find_max_min(arr)  # when I don't want to print it as a tuple
 # print(min_val, max_val)
+
 # print(find_max_min_brute(arr))
 # print(find_min_max_initial_comparision_builtinminmax(arr))
-print(max_min_tournament(low, high, arr))
+print(min_max_tournament(arr, low, high))
