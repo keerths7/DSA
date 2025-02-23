@@ -11,9 +11,11 @@ class Node:
         self.next = None
 
 node = Node(10)
-print(node.value)
+print(f"node's value: {node.value}")
 
 # Creating a linked list with no nodes
+# Time Complexity- 
+# Space Complexity- 
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -24,6 +26,8 @@ empty_linked_list = LinkedList()
 print(empty_linked_list.length)
 
 # Creating a linked list with 1 node:
+# Time Complexity- 
+# Space Complexity- 
 class Node:
     def __init__(self, value):
         self.value = value
@@ -35,3 +39,6 @@ class LinkedList:
         self.head = new_node
         self.tail = new_node
         self.length = 1
+
+linked_list = LinkedList(10)
+print(linked_list.length)
