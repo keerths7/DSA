@@ -65,8 +65,7 @@ def min_max_tournament(arr, low, high):
         arr_max = arr[low]
         return (arr_min, arr_max)
     elif high == low + 1:
-        if arr[low] < arr[high]:
-             
+        if arr[low] < arr[high]:           
             arr_min = arr[low]    
             arr_max = arr[high]
         else:
