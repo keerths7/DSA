@@ -15,7 +15,7 @@ def find_pairs_two_sum(nums, target):
                 return [i,j]
 
         
-# Solution 4- Using logic with dict
+# Solution 2- Using logic with dict
 # Time Complexity: O(n)
 # Space Complexity: O(1)
   

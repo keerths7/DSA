@@ -13,7 +13,7 @@ def max_num_product(arr):
 # Time Complexity: O(n)- since we are searching through all the elements in the array
 # Space Complexity: O(1)- no extra space used
 def max_num_product(arr):
-    max1, max2 = 0,0 
+    max1, max2 = float("-inf"), float("-inf")
     for i in arr:
         if i > max1:
             max2 = max1
