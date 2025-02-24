@@ -21,7 +21,15 @@ class LinkedList:
         self.length += 1 
 
     def __str__(self):
-       
+        result = ""
+        temp_head = self.head
+        # while temp_head is not None:
+        while temp_head:               # this is more pythonic
+            result += str(temp_head.value)
+            if temp_head.next:
+                result += " --> "
+            temp_head = temp_head.next
+        return result
 
 linked_list = LinkedList()
 print(linked_list)
