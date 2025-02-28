@@ -17,6 +17,7 @@ class LinkedList:
         else:
             self.tail.next = new_node
             self.tail = new_node
+        self.length += 1
     
     def prepend(self, value):
         new_node = Node(value)
@@ -26,10 +27,25 @@ class LinkedList:
         else:
             new_node.next = self.head
             self.head = new_node
+        self.length += 1
     
+    def pop(self):
+        popped_element = self.tail
+        if self.length == 0:
+            return None
+        elif self.length == 1:
+            self.head = None
+            self.tail = None
+        temp_head = self.head
+        while temp_head.next is not self.tail:
+            temp_head = temp_head.next
+        self.tail = temp_head
+        temp_head.next = None
+        return popped_element.value
+
     def __str__(self):
         result = ""
-        temp_node = self.head
+        temp_node = self.head 
         while temp_node:
             result += str(temp_node.value)
             if temp_node.next:
@@ -37,16 +53,11 @@ class LinkedList:
             temp_node = temp_node.next
         return result
 
-    def get(self, index):
-        current = self.head
-        for _ in range(index):
-            current = current.next
-        return current.value
-
 linked_list = LinkedList()
 linked_list.append(10)
-linked_list.append(20)
-linked_list.append(30)
-linked_list.append(40)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
 print(linked_list)
-print(linked_list.get(2))
+print(linked_list.pop())
+print(linked_list)

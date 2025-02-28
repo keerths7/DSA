@@ -17,6 +17,7 @@ class LinkedList:
         else:
             self.tail.next = new_node
             self.tail = new_node
+        self.length += 1
     
     def prepend(self, value):
         new_node = Node(value)
@@ -26,7 +27,14 @@ class LinkedList:
         else:
             new_node.next = self.head 
             self.head = new_node
+        self.length += 1
     
+    def traversal(self):
+        current = self.head
+        while current:
+            print(current.value)
+            current = current.next
+
     def __str__(self):
         result = ""
         temp_node = self.head 
@@ -36,12 +44,6 @@ class LinkedList:
                 result += " --> "
             temp_node = temp_node.next
         return result
-    
-    def traversal(self):
-        current = self.head
-        while current:
-            print(current.value)
-            current = current.next
 
 linked_list = LinkedList()
 linked_list.append(10)

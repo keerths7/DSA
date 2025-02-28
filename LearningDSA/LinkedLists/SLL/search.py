@@ -17,6 +17,7 @@ class LinkedList:
         else:
             self.tail.next = new_node
             self.tail = new_node
+        self.length += 1
     
     def prepend(self, value):
         new_node = Node(value)
@@ -26,6 +27,17 @@ class LinkedList:
         else:
             new_node.next = self.head
             self.head = new_node
+        self.length += 1
+    
+    def search(self, target):
+        current = self.head
+        index = 0
+        while current:
+            if current.value == target:
+                return True, index
+            current = current.next
+            index += 1
+        return False, -1
     
     def __str__(self):
         result = ""
@@ -36,11 +48,13 @@ class LinkedList:
                 result += " --> "
             temp_node = temp_node.next
         return result
-
+    
+    
 linked_list = LinkedList()
 linked_list.append(10)
 linked_list.append(20)
 linked_list.append(30)
 linked_list.append(40)
 print(linked_list)
-print(linked_list.get(2))
+print(linked_list.search(30))
+print(linked_list.search(0))

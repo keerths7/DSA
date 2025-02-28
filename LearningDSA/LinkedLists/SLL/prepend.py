@@ -21,7 +21,7 @@ class LinkedList:
 
     def prepend(self, value):
         new_node = Node(value) 
-        if self.length == 0:
+        if self.head is None:              # without this if condition, the self.tail remains None instead of new_node
             self.head = new_node
             self.tail = new_node
         else:
