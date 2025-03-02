@@ -30,18 +30,19 @@ class LinkedList:
         self.length += 1 
     
     def pop_first(self):
-        popped_element = self.head
-        if self.length == 0 :
+        popped_node = self.head
+        if self.length == 0:
             return None
-        elif self.length == 1:                # since self.tail would still point to the popped element
-            popped_element = self.head
+        elif self.length == 1:
             self.head = None
             self.tail = None
+            self.length -= 1
+            return popped_node
         else:
             self.head = self.head.next
-            popped_element.next = None
-        self.length -= 1
-        return popped_element
+            popped_node.next = None
+            self.length -= 1
+            return popped_node
     
     def __str__(self):
         result = ""
@@ -53,7 +54,11 @@ class LinkedList:
             temp_head = temp_head.next
         return result 
     
-linked_list =  LinkedList()
-linked_list.prepend(10)
-print(linked_list.head.value)
-        
+linked_list = LinkedList()
+linked_list.append(10)
+linked_list.append(20)
+linked_list.append(30)
+linked_list.append(40)
+print(linked_list)
+print(linked_list.pop_first())
+print(linked_list)
