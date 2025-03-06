@@ -31,21 +31,26 @@ class LinkedList:
         self.length += 1
     
     def insert(self, index, value):
-        new_node = Node(value)
         if index > self.length or index < 0:
             return False
-        if self.length == 0:                    # temp_node points to self.head which is None, then when we set new_node.next to temp_node.next, None has no next attribue.
-            self.head = new_node 
+        new_node = Node(value)
+        if index == 0:
+            if self.length == 0:               # temp_node points to self.head which is None, then when we set new_node.next to temp_node.next, None has no next attribue.
+                self.head = new_node
+                self.tail = new_node               
+            else:                              # index is 0 means, the temp_node remains self.head, and new_node gets inserted at 1st index instead
+                new_node.next = self.head
+                self.head = new_node
+        elif index == self.length:
+            self.tail.next = new_node
             self.tail = new_node
-        elif index == 0 :                       # index is 0 means, the temp_node remains self.head, and new_node gets inserted at 1st index instead
-            new_node.next = self.head
-            self.head = new_node
         else:
             temp_node = self.head
             for _ in range(index-1):
                 temp_node =  temp_node.next
             new_node.next =  temp_node.next
             temp_node.next = new_node
+            
         self.length += 1
         return True
 

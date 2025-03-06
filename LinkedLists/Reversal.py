@@ -9,9 +9,18 @@ class LinkedList:
         self.tail = None
         self.length = 0
     
-    def append(self):
-        ...
-    
+    def append(self,value):
+        new_node = Node(value)
+        if self.head == None:
+            self.head = new_node
+            self.tail = new_node
+            new_node.next = new_node
+        else:
+            self.tail.next = new_node
+            new_node.next = self.head
+            self.tail = new_node
+        self.length += 1
+
     def reverse(self):
         ...
 
