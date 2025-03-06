@@ -32,7 +32,15 @@ class CSLinkedList:
             result += " --> "
         return result
     
-
+    def get(self, index):
+        if index >= self.length or index < 0:
+            return None
+        else:
+            current_node = self.head 
+            for _ in range(index):
+                current_node = current_node.next
+            return current_node.value
+            
 
 cslinked_list = CSLinkedList()
 cslinked_list.append(10)
@@ -42,3 +50,5 @@ cslinked_list.append(40)
 cslinked_list.append(50)
 print(cslinked_list)
 print(cslinked_list.get(3))
+print(cslinked_list.get(5))
+print(cslinked_list.get(8))

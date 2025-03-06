@@ -40,10 +40,8 @@ class LinkedList:
         return result
 
     def get(self, index):
-        if index >= self.length or index < -1:
+        if index >= self.length or index < 0:
             return None
-        elif index == -1:
-            return self.tail
         current = self.head
         for _ in range(index):
             current = current.next
