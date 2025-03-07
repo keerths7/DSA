@@ -40,9 +40,12 @@ class LinkedList():
         return result
     
     def delete(self):
-        self.head = None
-        self.tail = None
-        self.length = 0 
+        if self.length == 0:
+            return False
+        else:
+            self.head = None
+            self.tail = None
+            self.length = 0 
 
 linked_list = LinkedList()
 linked_list.append(10)

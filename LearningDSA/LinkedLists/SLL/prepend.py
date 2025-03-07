@@ -31,12 +31,12 @@ class LinkedList:
 
     def __str__(self):
         result = ""
-        temp_head = self.head
-        while temp_head:
-            result += str(temp_head.value)
-            if temp_head.next:
+        temp_node = self.head
+        while temp_node:
+            result += str(temp_node.value)
+            if temp_node.next:
                 result += " --> "
-            temp_head = temp_head.next
+            temp_node = temp_node.next
         return result
 
 

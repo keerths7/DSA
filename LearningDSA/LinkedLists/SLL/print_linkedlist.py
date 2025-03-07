@@ -22,13 +22,13 @@ class LinkedList:
 
     def __str__(self):
         result = ""
-        temp_head = self.head
-        # while temp_head is not None:
-        while temp_head:               # this is more pythonic
-            result += str(temp_head.value)
-            if temp_head.next:
+        temp_node = self.head
+        # while temp_node is not None:
+        while temp_node:               # this is more pythonic
+            result += str(temp_node.value)
+            if temp_node.next:
                 result += " --> "
-            temp_head = temp_head.next
+            temp_node = temp_node.next
         return result
 
 linked_list = LinkedList()

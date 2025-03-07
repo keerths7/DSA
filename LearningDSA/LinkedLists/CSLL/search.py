@@ -32,11 +32,11 @@ class CSLinkedList:
             result += " --> "
         return result
 
-    def search(self, value):
+    def search(self, target):
         current_node = self.head
         index = 0 
         while current_node:
-            if current_node.value == value:
+            if current_node.value == target:
                 return True, index
             current_node = current_node.next
             index += 1 

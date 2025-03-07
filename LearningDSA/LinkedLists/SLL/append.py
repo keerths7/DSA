@@ -12,6 +12,7 @@ class LinkedList:
     def append(self, value):
         new_node = Node(value)
         if self.head is None:                    # without this if condition, errors occurs as self.tail has no next property as it is null.
+            self.head = new_node
             self.tail = new_node
         else:
             self.tail.next = new_node
