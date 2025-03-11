@@ -34,17 +34,17 @@ class LinkedList:
         if self.length == 0:
             return None
         elif self.length == 1:
+            popped_node = self.head
             self.head = None
             self.tail = None
-            self.length -= 1
-            return temp_node
         else:
             while temp_node.next is not self.tail:
                 temp_node = temp_node.next
             popped_node = temp_node.next
             temp_node.next = None
             self.tail = temp_node
-            self.length -= 1
+
+        self.length -= 1
         return popped_node
         
     def __str__(self):
