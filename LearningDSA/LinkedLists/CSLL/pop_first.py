@@ -1,9 +1,9 @@
 class Node:
-    def __init__(self):
-        self.value = ValueError
+    def __init__(self, value):
+        self.value = value
         self.next = None
 
-class LinkedList:
+class CSLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
@@ -22,15 +22,37 @@ class LinkedList:
         self.length += 1
 
     def __str__(self):
+        result = ""
         temp_node = self.head 
         while temp_node:
             result += str(temp_node.value)
             temp_node = temp_node.next
-            if temp_node is not self.head:
-                result += " --> "
-            return result
+            if temp_node is self.head:
+                break
+            result += " --> "
+        return result
     
     def pop_first(self):
-        self.head = self.head.next 
-        self.tail = self.head 
-        
+        if self.length == 0:
+            return None
+        popped_node = self.head
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next 
+            self.tail.next = self.head
+            popped_node.next = None
+
+        self.length -= 1
+        return popped_node
+    
+cslinked_list = CSLinkedList()
+cslinked_list.append(10)
+cslinked_list.append(20)
+cslinked_list.append(30)
+cslinked_list.append(40)
+cslinked_list.append(50)
+print(cslinked_list)
+cslinked_list.pop_first()
+print(cslinked_list)

@@ -33,24 +33,24 @@ class CSLinkedList:
         return result
 
     def pop(self):
-        if not self.head:
+        temp_node = self.head
+        if self.length == 0:
             return None
         elif self.length == 1:
             popped_node = self.head
             self.head = None
             self.tail = None
         else:
-            temp_node = self.head
             while temp_node.next is not self.tail:
-                temp_node = temp_node.next
-            popped_node = temp_node.next
+                temp_node = temp_node.next 
+            popped_node = self.tail
             temp_node.next = self.head
-            self.tail = temp_node
+            popped_node.next = None
 
         self.length -= 1
         return popped_node
-    
         
+
 cslinked_list = CSLinkedList()
 cslinked_list.append(10)
 cslinked_list.append(20)
@@ -58,5 +58,5 @@ cslinked_list.append(30)
 cslinked_list.append(40)
 cslinked_list.append(50)
 print(cslinked_list)
-cslinked_list.remove(0)
+cslinked_list.pop()
 print(cslinked_list)

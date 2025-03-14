@@ -36,13 +36,11 @@ class LinkedList:
         elif self.length == 1:
             self.head = None
             self.tail = None
-            self.length -= 1
-            return popped_node
         else:
             self.head = self.head.next
             popped_node.next = None
-            self.length -= 1
-            return popped_node
+        self.length -= 1
+        return popped_node
     
     def __str__(self):
         result = ""

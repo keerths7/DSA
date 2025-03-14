@@ -21,6 +21,53 @@ class CSLinkedList:
             self.tail = new_node
         self.length += 1 
 
+    def pop(self):
+        temp_node = self.head
+        if self.length == 0:
+            return None
+        elif self.length == 1:
+            popped_node = self.head
+            self.head = None
+            self.tail = None
+        else:
+            while temp_node.next is not self.tail:
+                temp_node = temp_node.next 
+            popped_node = self.tail
+            temp_node.next = self.head
+            popped_node.next = None
+        self.length -= 1
+        return popped_node
+
+    def pop_first(self):
+        popped_node = self.head
+        if self.length == 0:
+            return None
+        elif self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
+            popped_node.next = None
+        self.length -= 1
+        return popped_node
+    
+    def remove_simplified(self, index):
+        if index >= self.length or index < 0:
+            return None
+        elif index == 0:
+            popped_node = self.pop_first()
+        elif index == self.length - 1:
+            popped_node = self.pop()
+        else:
+            temp_node = self.head
+            for _ in range(index-1):
+                temp_node = temp_node.next
+            popped_node = temp_node.next
+            temp_node.next = popped_node.next 
+            popped_node.next = None
+        self.length -= 1
+        return popped_node
+
     def remove(self, index):
         if index >= self.length or index < 0:
             return None
@@ -31,15 +78,16 @@ class CSLinkedList:
                 self.head = None
                 self.tail = None
             else:
-                self.head = self.head.next 
-                popped_node.next = None
+                self.head = self.head.next
                 self.tail.next = self.head
+                popped_node.next = None
         elif index == self.length - 1:
             while temp_node.next is not self.tail:
                 temp_node = temp_node.next
-            popped_node = temp_node.next
+            popped_node = self.tail
             temp_node.next = self.head
             self.tail = temp_node 
+            popped_node.next = None
         else:
             for _ in range(index-1):
                 temp_node = temp_node.next
@@ -47,7 +95,7 @@ class CSLinkedList:
             temp_node.next = popped_node.next 
             popped_node.next = None
         self.length -= 1
-        return popped_node.value
+        return popped_node
 
     def __str__(self):
         result = ""

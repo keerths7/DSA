@@ -84,28 +84,27 @@ class LinkedList:
         temp_node = self.head
         if index == 0:
             popped_node = self.head
-            if self.length == 1 :
+            if self.length == 1:
                 self.head = None
                 self.tail = None
             else:
-                self.head = self.node.next
+                self.head = self.head.next
                 popped_node.next = None
-                self.tail.next = self.head
         elif index == self.length - 1:
-            while temp_node.next is not self.tail: 
+            while temp_node.next is not self.tail:
                 temp_node = temp_node.next
-            popped_node = temp_node.next
-            temp_node.next = None
+            popped_node = self.tail
             self.tail = temp_node
+            temp_node.next = None
         else:
             for _ in range(index-1):
                 temp_node = temp_node.next 
-            popped_node = temp_node.next 
+            popped_node = temp_node.next
             temp_node.next = popped_node.next
             popped_node.next = None
         self.length -= 1
         return popped_node
-    
+
     def remove_simplified(self, index):
         if index >= self.length or index < 0 :
             return None
