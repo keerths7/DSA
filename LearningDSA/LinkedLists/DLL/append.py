@@ -4,7 +4,7 @@ class Node:
         self.next = None
         self.prev = None
 
-class DLinkedList:       
+class DLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
@@ -27,15 +27,17 @@ class DLinkedList:
             self.tail = new_node
         else:
             self.tail.next = new_node
-            new_node.prev = self.tail
+            new_node.prev = self.tail 
             self.tail = new_node
         self.length += 1
 
-dllinked_list = DLinkedList()
-dllinked_list.append(10)
-dllinked_list.append(20)
-dllinked_list.append(30)
-dllinked_list.append(40)
-dllinked_list.append(50)
-print(dllinked_list)
-print(dllinked_list.length)
+dlinked_list = DLinkedList()
+print(dlinked_list)
+dlinked_list.append(10)
+dlinked_list.append(20)
+dlinked_list.append(30)
+dlinked_list.append(40)
+dlinked_list.append(50)
+print(dlinked_list)
+
+
