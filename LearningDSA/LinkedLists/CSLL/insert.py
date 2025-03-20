@@ -71,6 +71,7 @@ class CSLinkedList():
         self.length += 1
         return True
 
+
 cslinked_list = CSLinkedList()
 cslinked_list.append(10)
 cslinked_list.append(20)
