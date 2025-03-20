@@ -43,7 +43,6 @@ class CSLinkedList:
             self.head = self.head.next 
             self.tail.next = self.head
             popped_node.next = None
-
         self.length -= 1
         return popped_node
     

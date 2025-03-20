@@ -22,35 +22,48 @@ class DLinkedList:
         self.length += 1
     
     def pop_first(self):
-        ...
+        if self.length == 0: 
+            return None
+        popped_node = self.head
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
+            self.head.prev = None
+            popped_node.next = None
+        self.length -= 1
+        return popped_node
 
     def pop(self):
         if self.length == 0:
             return None
-        elif self.length == 1:
+        popped_node = self.tail
+        if self.length == 1:
             self.head = None
             self.tail = None
         else:
-            popped_node = self.tail
             temp_node = self.head
             while temp_node.next is not self.tail:
                 temp_node = temp_node.next
             temp_node.next = None
             self.tail.prev = None
-            self.tail =  temp_node
+            self.tail = temp_node
         self.length -= 1
         return popped_node
     
     def remove_simplified(self, index):
         if index >= self.length or index < 0:
             return None
+        if index == 0:
+            return self.pop_first()
         elif index == self.length - 1:
-            popped_node = self.pop()
+            return self.pop()
         else:
             temp_node = self.head
             for _ in range(index-1):
                 temp_node = temp_node.next
-            temp_node.next = popped_node
+            popped_node = temp_node.next
             temp_node.next = popped_node.next
             popped_node.next.prev = temp_node
             popped_node.prev = None 
@@ -101,11 +114,11 @@ class DLinkedList:
         
 dlinked_list = DLinkedList()
 dlinked_list.append(10)
-# dlinked_list.append(20)
-# dlinked_list.append(30)
-# dlinked_list.append(40)
-# dlinked_list.append(50)
-# dlinked_list.append(60)
+dlinked_list.append(20)
+dlinked_list.append(30)
+dlinked_list.append(40)
+dlinked_list.append(50)
+dlinked_list.append(60)
 print(dlinked_list)
 # popped_node = dlinked_list.remove(2)
 # if popped_node:

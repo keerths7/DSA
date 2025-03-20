@@ -30,11 +30,11 @@ class LinkedList:
         self.length += 1
     
     def pop(self):
-        temp_node = self.head
         if self.length == 0:
             return None
-        elif self.length == 1:
-            popped_node = self.head
+        temp_node = self.head
+        popped_node = self.tail
+        if self.length == 1:
             self.head = None
             self.tail = None
         else:

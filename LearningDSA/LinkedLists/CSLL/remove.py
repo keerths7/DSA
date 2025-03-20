@@ -22,11 +22,11 @@ class CSLinkedList:
         self.length += 1 
 
     def pop(self):
-        temp_node = self.head
         if self.length == 0:
             return None
-        elif self.length == 1:
-            popped_node = self.head
+        temp_node = self.head
+        popped_node = self.tail
+        if self.length == 1:
             self.head = None
             self.tail = None
         else:
@@ -40,15 +40,15 @@ class CSLinkedList:
         return popped_node
 
     def pop_first(self):
-        popped_node = self.head
         if self.length == 0:
             return None
-        elif self.length == 1:
+        popped_node = self.head
+        if self.length == 1:
             self.head = None
             self.tail = None
         else:
             self.head = self.head.next
-            self.tail = self.head
+            self.tail.next = self.head
             popped_node.next = None
         self.length -= 1
         return popped_node
@@ -57,9 +57,9 @@ class CSLinkedList:
         if index >= self.length or index < 0:
             return None
         elif index == 0:
-            popped_node = self.pop_first()
+            return self.pop_first()
         elif index == self.length - 1:
-            popped_node = self.pop()
+            return self.pop()
         else:
             temp_node = self.head
             for _ in range(index-1):
