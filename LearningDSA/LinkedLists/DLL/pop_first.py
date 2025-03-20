@@ -28,9 +28,10 @@ class DLinkedList:
         if self.length == 1:
             self.head = None
             self.tail = None
-        self.head = self.head.next
-        self.head.prev = None
-        popped_node.next = None
+        else:
+            self.head = self.head.next
+            self.head.prev = None
+            popped_node.next = None
         self.length -= 1
         return popped_node
     
@@ -46,11 +47,11 @@ class DLinkedList:
     
 dlinked_list = DLinkedList()
 dlinked_list.append(10)
-dlinked_list.append(20)
-dlinked_list.append(30)
-dlinked_list.append(40)
-dlinked_list.append(50)
-dlinked_list.append(60)
+# dlinked_list.append(20)
+# dlinked_list.append(30)
+# dlinked_list.append(40)
+# dlinked_list.append(50)
+# dlinked_list.append(60)
 print(dlinked_list)
 popped_node = dlinked_list.pop_first()
 if popped_node:
