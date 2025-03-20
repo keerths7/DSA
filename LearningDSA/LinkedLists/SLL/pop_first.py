@@ -58,5 +58,7 @@ linked_list.append(20)
 linked_list.append(30)
 linked_list.append(40)
 print(linked_list)
-print(linked_list.pop_first())
+popped_node = linked_list.pop_first()
+if popped_node:
+    print(popped_node.value)
 print(linked_list)

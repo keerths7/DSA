@@ -34,6 +34,7 @@ class CSLinkedList:
                 temp_node = temp_node.next 
             popped_node = self.tail
             temp_node.next = self.head
+            self.tail = temp_node
             popped_node.next = None
         self.length -= 1
         return popped_node
@@ -47,6 +48,7 @@ class CSLinkedList:
             self.tail = None
         else:
             self.head = self.head.next
+            self.tail = self.head
             popped_node.next = None
         self.length -= 1
         return popped_node
@@ -114,4 +116,28 @@ cslinked_list.append(20)
 cslinked_list.append(30)
 cslinked_list.append(40)
 cslinked_list.append(50)
+cslinked_list.append(60)
+print(cslinked_list)
+# popped_node = cslinked_list.remove(2)
+# if popped_node:
+#     print(popped_node.value)
+# print(cslinked_list)
+# popped_node = cslinked_list.remove(4)
+# if popped_node:
+#     print(popped_node.value)
+# print(cslinked_list)
+# popped_node = cslinked_list.remove(0)
+# if popped_node:
+#     print(popped_node.value)
+popped_node = cslinked_list.remove_simplified(2)
+if popped_node:
+    print(popped_node.value)
+print(cslinked_list)
+popped_node = cslinked_list.remove_simplified(4)
+if popped_node:
+    print(popped_node.value)
+print(cslinked_list)
+popped_node = cslinked_list.remove_simplified(0)
+if popped_node:
+    print(popped_node.value)
 print(cslinked_list)

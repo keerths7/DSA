@@ -54,5 +54,7 @@ cslinked_list.append(30)
 cslinked_list.append(40)
 cslinked_list.append(50)
 print(cslinked_list)
-cslinked_list.pop_first()
+popped_node = cslinked_list.pop_first()
+if popped_node:
+    print(popped_node.value)
 print(cslinked_list)

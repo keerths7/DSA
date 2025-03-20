@@ -50,7 +50,6 @@ class CSLinkedList:
         self.length -= 1
         return popped_node
         
-
 cslinked_list = CSLinkedList()
 cslinked_list.append(10)
 cslinked_list.append(20)
@@ -58,5 +57,7 @@ cslinked_list.append(30)
 cslinked_list.append(40)
 cslinked_list.append(50)
 print(cslinked_list)
-cslinked_list.pop()
+popped_node = cslinked_list.pop()
+if popped_node:
+    print(popped_node.value)
 print(cslinked_list)

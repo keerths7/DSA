@@ -91,9 +91,9 @@ class LinkedList:
                 self.head = self.head.next
                 popped_node.next = None
         elif index == self.length - 1:
+            popped_node = self.tail
             while temp_node.next is not self.tail:
                 temp_node = temp_node.next
-            popped_node = self.tail
             self.tail = temp_node
             temp_node.next = None
         else:
@@ -127,7 +127,29 @@ linked_list.append(20)
 linked_list.append(30)
 linked_list.append(40)
 linked_list.append(50)
-removed_node = linked_list.remove(1)
-if removed_node:
-    print(removed_node.value)
+linked_list.append(60)
+print(linked_list)
+# popped_node = linked_list.remove(2)
+# if popped_node:
+#     print(popped_node.value)
+# print(linked_list)
+# popped_node = linked_list.remove(4)
+# if popped_node:
+#     print(popped_node.value)
+# print(linked_list)
+# popped_node = linked_list.remove(0)
+# if popped_node:
+#     print(popped_node.value)
+
+popped_node = linked_list.remove_simplified(2)
+if popped_node:
+    print(popped_node.value)
+print(linked_list)
+popped_node = linked_list.remove_simplified(4)
+if popped_node:
+    print(popped_node.value)
+print(linked_list)
+popped_node = linked_list.remove_simplified(0)
+if popped_node:
+    print(popped_node.value)
 print(linked_list)
