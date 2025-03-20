@@ -22,11 +22,11 @@ class CSLinkedList:
         self.length += 1 
 
     def pop(self):
-        temp_node = self.head
         if self.length == 0:
             return None
-        elif self.length == 1:
-            popped_node = self.head
+        temp_node = self.head
+        popped_node = self.tail
+        if self.length == 1:
             self.head = None
             self.tail = None
         else:
@@ -34,19 +34,21 @@ class CSLinkedList:
                 temp_node = temp_node.next 
             popped_node = self.tail
             temp_node.next = self.head
+            self.tail = temp_node
             popped_node.next = None
         self.length -= 1
         return popped_node
 
     def pop_first(self):
-        popped_node = self.head
         if self.length == 0:
             return None
-        elif self.length == 1:
+        popped_node = self.head
+        if self.length == 1:
             self.head = None
             self.tail = None
         else:
             self.head = self.head.next
+            self.tail.next = self.head
             popped_node.next = None
         self.length -= 1
         return popped_node
@@ -55,9 +57,9 @@ class CSLinkedList:
         if index >= self.length or index < 0:
             return None
         elif index == 0:
-            popped_node = self.pop_first()
+            return self.pop_first()
         elif index == self.length - 1:
-            popped_node = self.pop()
+            return self.pop()
         else:
             temp_node = self.head
             for _ in range(index-1):
@@ -114,4 +116,28 @@ cslinked_list.append(20)
 cslinked_list.append(30)
 cslinked_list.append(40)
 cslinked_list.append(50)
+cslinked_list.append(60)
+print(cslinked_list)
+# popped_node = cslinked_list.remove(2)
+# if popped_node:
+#     print(popped_node.value)
+# print(cslinked_list)
+# popped_node = cslinked_list.remove(4)
+# if popped_node:
+#     print(popped_node.value)
+# print(cslinked_list)
+# popped_node = cslinked_list.remove(0)
+# if popped_node:
+#     print(popped_node.value)
+popped_node = cslinked_list.remove_simplified(2)
+if popped_node:
+    print(popped_node.value)
+print(cslinked_list)
+popped_node = cslinked_list.remove_simplified(4)
+if popped_node:
+    print(popped_node.value)
+print(cslinked_list)
+popped_node = cslinked_list.remove_simplified(0)
+if popped_node:
+    print(popped_node.value)
 print(cslinked_list)
