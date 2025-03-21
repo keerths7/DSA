@@ -27,7 +27,7 @@ class DLinkedList:
         while temp_node:
             result += str(temp_node.value)
             if temp_node.next:
-                result += "<-->"
+                result += " <--> "
             temp_node = temp_node.next
         return result
 
