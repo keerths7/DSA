@@ -47,11 +47,11 @@ class DLinkedList:
     
 dlinked_list = DLinkedList()
 dlinked_list.append(10)
-# dlinked_list.append(20)
-# dlinked_list.append(30)
-# dlinked_list.append(40)
-# dlinked_list.append(50)
-# dlinked_list.append(60)
+dlinked_list.append(20)
+dlinked_list.append(30)
+dlinked_list.append(40)
+dlinked_list.append(50)
+dlinked_list.append(60)
 print(dlinked_list)
 popped_node = dlinked_list.pop_first()
 if popped_node:
