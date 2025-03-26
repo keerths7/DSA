@@ -37,7 +37,7 @@ class LinkedList:
                 return True, index
             current = current.next
             index += 1
-        return False, -1
+        return False
     
     def __str__(self):
         result = ""

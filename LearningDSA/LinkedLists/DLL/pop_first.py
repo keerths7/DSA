@@ -41,17 +41,17 @@ class DLinkedList:
         while temp_node:
             result += str(temp_node.value)
             if temp_node.next:
-                result += "<-->"
+                result += " <--> "
             temp_node = temp_node.next
         return result
     
 dlinked_list = DLinkedList()
 dlinked_list.append(10)
-# dlinked_list.append(20)
-# dlinked_list.append(30)
-# dlinked_list.append(40)
-# dlinked_list.append(50)
-# dlinked_list.append(60)
+dlinked_list.append(20)
+dlinked_list.append(30)
+dlinked_list.append(40)
+dlinked_list.append(50)
+dlinked_list.append(60)
 print(dlinked_list)
 popped_node = dlinked_list.pop_first()
 if popped_node:

@@ -41,7 +41,7 @@ class CSLinkedList:
             current_node = current_node.next
             index += 1 
             if current_node is self.head:
-                return False, -1
+                return False
         
 cslinked_list = CSLinkedList()
 cslinked_list.append(10)
