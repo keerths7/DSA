@@ -29,11 +29,11 @@ class CDLinkedList:
             new_node.next = new_node
             new_node.prev = new_node
         else:
-                self.tail.next = new_node
-                new_node.prev = self.tail
-                self.tail = new_node
-                self.tail.next = self.head
-                self.head.prev = new_node
+            self.tail.next = new_node
+            new_node.prev = self.tail
+            self.tail = new_node
+            new_node.next = self.head
+            self.head.prev = new_node
         self.length += 1 
 
 cdlinked_list = CDLinkedList()

@@ -52,9 +52,9 @@ class DLinkedList:
             for _ in range(index-1):
                 temp_node = temp_node.next
             new_node.next = temp_node.next
-            temp_node.next = new_node
             temp_node.next.prev = new_node
             new_node.prev = temp_node
+            temp_node.next = new_node
         self.length += 1 
         return True
 
