@@ -33,7 +33,7 @@ class CDLinkedList:
             temp_node = temp_node.next
             if temp_node is self.head:
                 break
-            result += "<-->"
+            result += " <--> "
         return result 
 
     def insert(self, index, value):

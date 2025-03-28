@@ -39,12 +39,15 @@ class DLinkedList:
             self.head = None
             self.tail = None
         else:
-            temp_node = self.head
-            while temp_node.next is not self.tail:
-                temp_node = temp_node.next
-            temp_node.next = None
-            self.tail.prev = None
-            self.tail = temp_node
+            # temp_node = self.head
+            # while temp_node.next is not self.tail:
+            #     temp_node = temp_node.next
+            # temp_node.next = None
+            # self.tail.prev = None
+            # self.tail = temp_node
+            self.tail = self.tail.prev
+            self.tail.next = None
+            popped_node.prev = None
         self.length -= 1 
         return popped_node 
 

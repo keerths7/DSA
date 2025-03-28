@@ -43,10 +43,8 @@ class CSLinkedList:
         else:
             while temp_node.next is not self.tail:
                 temp_node = temp_node.next 
-            popped_node = self.tail
             temp_node.next = self.head
             popped_node.next = None
-
         self.length -= 1
         return popped_node
         

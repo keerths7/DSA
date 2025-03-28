@@ -43,12 +43,15 @@ class DLinkedList:
             self.head = None
             self.tail = None
         else:
-            temp_node = self.head
-            while temp_node.next is not self.tail:
-                temp_node = temp_node.next
-            temp_node.next = None
-            self.tail.prev = None
-            self.tail = temp_node
+            # temp_node = self.head
+            # while temp_node.next is not self.tail:
+            #     temp_node = temp_node.next
+            # temp_node.next = None
+            # self.tail.prev = None
+            # self.tail = temp_node
+            self.tail = self.tail.prev
+            self.tail.next = None
+            popped_node.prev = None
         self.length -= 1
         return popped_node
     
@@ -74,7 +77,6 @@ class DLinkedList:
     def remove(self, index):
         if index >= self.length or index < 0:
             return None
-        temp_node = self.head
         if index == 0:
             popped_node = self.head 
             if self.length == 1:
@@ -82,16 +84,20 @@ class DLinkedList:
                 self.tail = None
             else:
                 self.head = self.head.next
-                temp_node.next = None
                 self.head.prev = None
+                popped_node.next = None
         elif index == self.length - 1:
             popped_node = self.tail
-            while temp_node.next is not self.tail:
-                temp_node = temp_node.next
-            temp_node.next = None
-            self.tail.prev = None
-            self.tail = temp_node
+            # while temp_node.next is not self.tail:
+            #     temp_node = temp_node.next
+            # temp_node.next = None
+            # self.tail.prev = None
+            # self.tail = temp_node
+            self.tail = self.tail.prev 
+            self.tail.next = None
+            popped_node.prev = None
         else:
+            temp_node = self.head
             for _ in range(index-1):
                 temp_node = temp_node.next
             popped_node = temp_node.next 

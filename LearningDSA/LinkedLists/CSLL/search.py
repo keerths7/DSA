@@ -33,15 +33,15 @@ class CSLinkedList:
         return result
 
     def search(self, target):
-        current_node = self.head
+        temp_node = self.head
         index = 0 
-        while current_node:
-            if current_node.value == target:
+        while temp_node:
+            if temp_node.value == target:
                 return True, index
-            current_node = current_node.next
-            index += 1 
-            if current_node is self.head:
+            temp_node = temp_node.next
+            if temp_node is self.head:
                 return False
+            index += 1 
         
 cslinked_list = CSLinkedList()
 cslinked_list.append(10)
@@ -51,3 +51,4 @@ cslinked_list.append(40)
 cslinked_list.append(50)
 print(cslinked_list)
 print(cslinked_list.search(80))
+print(cslinked_list.search(50))

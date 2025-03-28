@@ -30,12 +30,12 @@ class LinkedList:
         self.length += 1
     
     def search(self, target):
-        current = self.head
+        temp_node = self.head
         index = 0
-        while current:
-            if current.value == target:
+        while temp_node:
+            if temp_node.value == target:
                 return True, index
-            current = current.next
+            temp_node = temp_node.next
             index += 1
         return False
     
