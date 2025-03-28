@@ -126,5 +126,28 @@ cdlinked_list.append(20)
 cdlinked_list.append(30)
 cdlinked_list.append(40)
 cdlinked_list.append(50)
-cdlinked_list.prepend(5)
+print(cdlinked_list)
+# popped_node = cdlinked_list.remove(0)
+# if popped_node:
+#     print(popped_node.value)
+# print(cdlinked_list)
+# popped_node = cdlinked_list.remove(3)
+# if popped_node:
+#     print(popped_node.value)
+# print(cdlinked_list)
+# popped_node = cdlinked_list.remove(1)
+# if popped_node:
+#     print(popped_node.value)
+# print(cdlinked_list)
+popped_node = cdlinked_list.remove_simplified(0)
+if popped_node:
+    print(popped_node.value)
+print(cdlinked_list)
+popped_node = cdlinked_list.remove_simplified(3)
+if popped_node:
+    print(popped_node.value)
+print(cdlinked_list)
+popped_node = cdlinked_list.remove_simplified(1)
+if popped_node:
+    print(popped_node.value)
 print(cdlinked_list)
