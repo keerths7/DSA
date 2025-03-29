@@ -36,5 +36,23 @@ class CDLinkedList:
             result += " <--> "
         return result
     
-    def get(self):
-        self.
+    def get(self, index):
+        if index >= self.length or index < 0:
+            return None 
+        else:
+            temp_node = self.head
+            for _ in range(index):
+                temp_node = temp_node.next
+            return temp_node.value
+
+cdlinkedlist = CDLinkedList()
+cdlinkedlist.append(10)
+cdlinkedlist.append(20)
+cdlinkedlist.append(30)
+cdlinkedlist.append(40)
+cdlinkedlist.append(50)
+print(cdlinkedlist)
+print(cdlinkedlist.get(2))
+print(cdlinkedlist.get(-2))
+print(cdlinkedlist.get(20))
+print(cdlinkedlist)
