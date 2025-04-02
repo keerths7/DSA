@@ -35,12 +35,12 @@ print(squared_negatives)
 
 # printing only the consonants
 def check_consonant(letter):
-    vowels = "aeiou"
+    vowels = "aeiouAEIOU"
     if letter.isalpha() and letter.lower() not in vowels:
                 return True
 
-sentence = input("Enter any word: ")
-consonant_list = [i for i in sentence if check_consonant(i)]
+word = input("Enter any word: ")
+consonant_list = [i for i in word if check_consonant(i)]
 print(consonant_list)
 
 # Transforming values based on a condition:

@@ -2,35 +2,36 @@ class Stack:
     def __init__(self):
         self.list = []
         self.length = 0
-
+    
     def is_empty(self):
         if self.length == 0:
             return True
         return False
-
-    def push(self,x):
-        self.list.append(x)
-        self.length += 1 
-
-    def peek(self):
-        return self.list[-1]
+    
+    def push(self, value):
+        self.list.append(value)
+        self.length += 1
     
     def pop(self):
         popped = self.list.pop()
-        self.length -= 1 
+        self.length -= 1
         return popped
     
-    def __str__(self):
-        reverse = reversed(self.list)
-        str_list = [str(x) for x in reverse]
-        return "\n".join(str_list)
+    def peek(self):
+        return self.list[-1]
     
+    def __str__(self):
+        reversed_list = reversed(self.list)
+        str_reversed_list =  [str(i) for i in reversed_list]
+        return "\n".join(str_reversed_list)
+
 stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-stack.push(4)
-print(stack)
+print(stack.is_empty())
+stack.push(10)
+stack.push(20)
+stack.push(30)
+stack.push(40)
+print(stack.is_empty())
+print(stack.peek())
 print(stack.pop())
 print(stack)
-print(stack.peek())
