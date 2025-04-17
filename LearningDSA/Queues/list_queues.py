@@ -13,7 +13,7 @@ class Queue:
     def dequeue(self):
         if self.is_empty():
             return None 
-        popped= self.list.pop(0)
+        popped = self.list.pop(0)
         self.length -= 1
         return popped
 
